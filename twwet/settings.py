@@ -12,6 +12,9 @@ https://docs.djangoproject.com/en/6.0/ref/settings/
 
 from pathlib import Path
 import os
+
+from django.conf.global_settings import LOGOUT_REDIRECT_URL, LOGIN_REDIRECT_URL
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -119,3 +122,6 @@ STATIC_URL = 'static/'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 STATICFILES_URL = [os.path.join(BASE_DIR, 'static')]
+LOGIN_URL='/accounts/login'
+LOGIN_REDIRECT_URL='/usertweet/'
+LOGOUT_REDIRECT_URL='/usertweet/'
